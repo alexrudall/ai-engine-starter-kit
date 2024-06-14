@@ -1,0 +1,81 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.openai.com/v1/assistants/asst_SrmjTd9rkxYrDcjpEbpg8Cnx
+    body:
+      encoding: UTF-8
+      string: '{"name":"Sharable","model":"gpt-3.5-turbo","description":"Sharable","instructions":"Design
+        a big hat"}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer sk-AizTVjdUvJmbL4FQrAp3qgRN4RpNudGNatFErFJ2
+      Openai-Organization:
+      - org-Rf437IxKhhQPMiIQ0Es8OwrH
+      Openai-Beta:
+      - assistants=v2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 14 Jun 2024 09:34:53 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-jxm65ijkzc1qrfhc0ij8moic
+      X-Request-Id:
+      - req_7a3848370542d77317d7879d6bb1af8d
+      Openai-Processing-Ms:
+      - '94'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=kw7MBi42m.9ZZ.vNvDbeSViOsgsssYvJ48m8Oy1nXmc-1718357693-1.0.1.1-mSoc7uiufbi7x9aADULfy7NlX5P9rirunqzWCOVKq8LuUs6bUf9mr_9oqcvrYWjQdKQGsRDWgzI4FfdZPUINiA;
+        path=/; expires=Fri, 14-Jun-24 10:04:53 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=5cQ1YHbLb5on4LjSxIJ7weEeR1z7BpHYPUsgDRW8hpM-1718357693167-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 893953bccfc363b2-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "asst_SrmjTd9rkxYrDcjpEbpg8Cnx",
+          "object": "assistant",
+          "created_at": 1718357692,
+          "name": "Sharable",
+          "description": "Sharable",
+          "model": "gpt-3.5-turbo",
+          "instructions": "Design a big hat",
+          "tools": [],
+          "top_p": 1.0,
+          "temperature": 1.0,
+          "tool_resources": {},
+          "metadata": {},
+          "response_format": "auto"
+        }
+  recorded_at: Fri, 14 Jun 2024 09:34:53 GMT
+recorded_with: VCR 6.2.0

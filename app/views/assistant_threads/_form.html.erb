@@ -1,0 +1,17 @@
+<%= form_with(model: assistant_thread, class: "contents") do |form| %>
+  <% if assistant_thread.errors.any? %>
+    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+      <h2><%= pluralize(assistant_thread.errors.count, "error") %> prohibited this thread from being saved:</h2>
+
+      <ul>
+        <% assistant_thread.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="inline">
+    <%= form.submit class: "rounded-lg py-3 px-5 bg-red-600 text-white inline-block font-medium cursor-pointer" %>
+  </div>
+<% end %>

@@ -1,0 +1,11 @@
+development:
+  adapter: redis
+  url: <%= ENV.fetch("REDIS_URL", nil) %>
+
+test:
+  adapter: redis
+  url: <%= ENV.fetch("REDIS_URL", nil) %>
+
+production:
+  adapter: redis
+  url: <%= ENV.fetch("REDIS_TLS_URL", nil) %>

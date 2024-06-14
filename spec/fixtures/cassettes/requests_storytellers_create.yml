@@ -1,0 +1,81 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.openai.com/v1/assistants
+    body:
+      encoding: UTF-8
+      string: '{"name":"Sharable","model":"gpt-3.5-turbo","description":"Sharable","instructions":"innovate
+        collaborative relationships"}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer sk-AizTVjdUvJmbL4FQrAp3qgRN4RpNudGNatFErFJ2
+      Openai-Organization:
+      - org-Rf437IxKhhQPMiIQ0Es8OwrH
+      Openai-Beta:
+      - assistants=v2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 14 Jun 2024 09:34:52 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-jxm65ijkzc1qrfhc0ij8moic
+      X-Request-Id:
+      - req_5a33744ce2fa7e75e99e62110b3d6f17
+      Openai-Processing-Ms:
+      - '56'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=GEDiUGRn9DjY3GtC46LViGdGpZLL2.bodmoJLlZWhdg-1718357692-1.0.1.1-FGiEXj2cqBgqfHmQ4_7wmeVlGU7e8b_nrhkiz_fopEyDHnu7_oVJx7iNKI_QHSAuvFWuscRxYwIT7ysRTPhX4w;
+        path=/; expires=Fri, 14-Jun-24 10:04:52 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=HBErKm1ovP2kYzGSo66fufSs7bcKWiWzEFzsXdg5CC0-1718357692841-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 893953bb1ac152ab-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "asst_SrmjTd9rkxYrDcjpEbpg8Cnx",
+          "object": "assistant",
+          "created_at": 1718357692,
+          "name": "Sharable",
+          "description": "Sharable",
+          "model": "gpt-3.5-turbo",
+          "instructions": "innovate collaborative relationships",
+          "tools": [],
+          "top_p": 1.0,
+          "temperature": 1.0,
+          "tool_resources": {},
+          "metadata": {},
+          "response_format": "auto"
+        }
+  recorded_at: Fri, 14 Jun 2024 09:34:52 GMT
+recorded_with: VCR 6.2.0

@@ -1,0 +1,23 @@
+<div id="<%= dom_id assistant_thread %>">
+  <p class="my-5">
+    <%= "Created #{assistant_thread.created_at.to_formatted_s(:short)}" %>
+    <% storytellers = assistant_thread.runs.map { |run| run.assistant.assistable }.uniq %>
+    <% if storytellers.one? %>
+      <%= "with " %>
+      <%= link_to storytellers.first.name, storytellers.first %>
+    <% elsif storytellers.any? %>
+      <%= "with: " %>
+      <ul>
+        <% storytellers.map do |storyteller| %>
+          <li><%= link_to storyteller.name, storyteller %></li>
+        <% end %>
+      </ul>
+    <% end %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this thread", assistant_thread, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to "Edit this thread", edit_assistant_thread_path(assistant_thread), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

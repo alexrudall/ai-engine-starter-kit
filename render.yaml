@@ -1,0 +1,33 @@
+databases:
+  - name: ai-engine-starter-kit
+    databaseName: ai-engine-starter-kit
+    user: ai-engine-starter-kit
+
+services:
+  - type: web
+    name: ai-engine-starter-kit
+    runtime: ruby
+    buildCommand: "./bin/render-build.sh"
+    preDeployCommand: "./bin/rails db:migrate"
+    startCommand: "./bin/rails server"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: ai-engine-starter-kit
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
+      - key: WEB_CONCURRENCY
+        value: 2 # sensible default
+  - type: worker
+    name: ai-engine-starter-kit-worker
+    runtime: ruby
+    buildCommand: "./bin/render-worker-build.sh"
+    startCommand: "./bin/rails solid_queue:start"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: ai-engine-starter-kit
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false

@@ -1,0 +1,47 @@
+<%= form_with(model: storyteller, class: "contents") do |form| %>
+  <% if storyteller.errors.any? %>
+    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+      <h2><%= pluralize(storyteller.errors.count, "error") %> prohibited this storyteller from being saved:</h2>
+
+      <ul>
+        <% storyteller.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="my-5">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-600 focus:ring-red-600", required: true %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :model %>
+    <%= form.select :model, model_options(storyteller: storyteller), {}, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-600 focus:ring-red-600" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :description %>
+    <%= form.text_field :description, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-600 focus:ring-red-600", required: true %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :instructions %>
+    <%= form.text_area :instructions, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-600 focus:ring-red-600", required: true %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :max_prompt_tokens %>
+    <%= form.number_field :max_prompt_tokens, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-600 focus:ring-red-600", required: true, min: AI::Engine::Assistant::MIN_PROMPT_TOKENS %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :max_completion_tokens %>
+    <%= form.number_field :max_completion_tokens, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-600 focus:ring-red-600", required: true, min: AI::Engine::Assistant::MIN_COMPLETION_TOKENS %>
+  </div>
+
+  <div class="inline">
+    <%= form.submit class: "rounded-lg py-3 px-5 bg-red-600 text-white inline-block font-medium cursor-pointer" %>
+  </div>
+<% end %>

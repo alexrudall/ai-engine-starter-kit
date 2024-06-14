@@ -1,0 +1,4 @@
+web: bin/rails server
+css: bin/rails tailwindcss:watch
+sidekiq: bundle exec sidekiq -c 2
+queue: redis-server
