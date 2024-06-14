@@ -21,6 +21,15 @@ You need to purchase AI::Engine access to use this starter kit.
 The AI_ENGINE_TOKEN must be set in the host environment (eg. with export AI_ENGINE_TOKEN=<key>), adding it to .env will not work.
 The token should start with "activ-..."
 
+You can add AI::Engine to your Gemfile like this - note the version (0.1.2 in this case) is set in the URL.
+
+```
+# The easiest way to get AI into your Rails app.
+source "https://#{ENV["AI_ENGINE_TOKEN"]}@get.keygen.sh/97ac1497-64bd-4754-8336-d709b6df18b1/0.1.2" do
+  gem "ai-engine"
+end
+```
+
 ## Set up Google Sign In with Omniauth
 
 - Go to the [Google Cloud Console](https://console.cloud.google.com/)
