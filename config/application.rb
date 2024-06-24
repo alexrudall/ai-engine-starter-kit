@@ -19,7 +19,7 @@ require "action_cable/engine"
 Bundler.require(*Rails.groups)
 
 module StorytellerExample
-  VERSION = "0.1.0"
+  VERSION = "0.1.4"
 
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.

@@ -5,8 +5,8 @@ ruby "3.2.2"
 gem "rails", "~> 7.1.3"
 
 # The easiest way to get AI into your Rails app.
-source "https://#{ENV["AI_ENGINE_TOKEN"]}@get.keygen.sh/97ac1497-64bd-4754-8336-d709b6df18b1/0.1.2" do
-  gem "ai-engine", "~> 0.1.2"
+source "https://#{ENV["AI_ENGINE_TOKEN"]}@get.keygen.sh/97ac1497-64bd-4754-8336-d709b6df18b1/0.1.4" do
+  gem "ai-engine", "~> 0.1.4"
 end
 
 # Reduces boot times through caching; required in config/boot.rb
