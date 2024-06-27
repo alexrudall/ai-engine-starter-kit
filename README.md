@@ -17,7 +17,7 @@
 
 ## Set up AI::Engine
 
-You need to purchase AI::Engine access to use this starter kit.
+You need to [purchase AI::Engine access](https://insertrobot.com) to use this starter kit - see [insertrobot.com](https://insertrobot.com).
 The AI_ENGINE_TOKEN must be set in the host environment (eg. with export AI_ENGINE_TOKEN=<key>), adding it to .env will not work.
 The token should start with "activ-..."
 
