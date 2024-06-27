@@ -1,4 +1,4 @@
-class CreateMessageAndRun < SidekiqJob
+class CreateAssistantMessageAndRun < SidekiqJob
   def perform(args)
     storyteller_id, assistant_thread_id, user_id, content = args.values_at("storyteller_id", "assistant_thread_id", "user_id", "content")
 

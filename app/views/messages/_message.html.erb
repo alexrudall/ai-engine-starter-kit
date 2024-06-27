@@ -4,13 +4,12 @@
   <li id="<%= dom_id message %>" class="py-4">
 <% end %>
   <div class="flex items-center gap-x-3">
-    <% user = message.assistant_thread.threadable %>
     <% if message.user? %>
+      <% user = message.user %>
       <%= image_tag(user.avatar_url, class: "h-6 w-6 flex-none rounded-full bg-gray-800") %>
-      <h3 class="flex-auto truncate font-semibold leading-6 text-gray-900"><%= user.full_name %></h3>
+      <h3 class="flex-auto truncate font-semibold leading-6 text-gray-900"><%= created_by(message: message) %></h3>
     <% else %>
-      <h3 class="flex-auto truncate font-semibold leading-6 text-gray-900"><%= message.run.assistant.assistable.name %></h3>
-      <div class="flex-none text-sm text-gray-500"><%= message.prompt_token_usage || "?" %> prompt & <%= message.completion_token_usage || "?" %> completion tokens</div>
+      <div class="flex-none text-sm text-gray-500"><%= message.prompt_token_usage || "?" %> prompt & <%= message.completion_token_usage || "?" %> completion tokens [<%= created_by(message: message) %>]</div>
       <div class="flex-none text-sm text-gray-500"></div>
     <% end %>
     <div class="flex-none text-sm text-gray-500"><%= time_ago_in_words(message.created_at) %> ago</div>
