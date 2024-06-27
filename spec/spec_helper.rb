@@ -28,8 +28,8 @@ VCR.configure do |c|
     record: ENV.fetch("OPENAI_ACCESS_TOKEN", nil) ? :all : :new_episodes,
     match_requests_on: [:method, :uri]
   }
-  c.filter_sensitive_data("<OPENAI_ACCESS_TOKEN>") { OpenAI.configuration.access_token }
-  c.filter_sensitive_data("<OPENAI_ORGANIZATION_ID>") { OpenAI.configuration.organization_id }
+  c.filter_sensitive_data("<OPENAI_ACCESS_TOKEN>") { ENV["OPENAI_ACCESS_TOKEN"] }
+  c.filter_sensitive_data("<OPENAI_ORGANIZATION_ID>") { ENV["OPENAI_ORGANIZATION_ID"] }
 end
 
 RSpec.configure do |config|

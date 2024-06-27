@@ -5,15 +5,15 @@ http_interactions:
     uri: https://api.openai.com/v1/assistants
     body:
       encoding: UTF-8
-      string: '{"name":"Sharable","model":"gpt-3.5-turbo","description":"Sharable","instructions":"innovate
-        collaborative relationships"}'
+      string: '{"name":"demand-driven","model":"gpt-3.5-turbo","description":"demand-driven","instructions":"whiteboard
+        compelling partnerships"}'
     headers:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer sk-AizTVjdUvJmbL4FQrAp3qgRN4RpNudGNatFErFJ2
+      - Bearer <OPENAI_ACCESS_TOKEN>
       Openai-Organization:
-      - org-Rf437IxKhhQPMiIQ0Es8OwrH
+      - "<OPENAI_ORGANIZATION_ID>"
       Openai-Beta:
       - assistants=v2
       Accept-Encoding:
@@ -28,7 +28,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 14 Jun 2024 09:34:52 GMT
+      - Thu, 27 Jun 2024 08:38:54 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -40,36 +40,36 @@ http_interactions:
       Openai-Organization:
       - user-jxm65ijkzc1qrfhc0ij8moic
       X-Request-Id:
-      - req_5a33744ce2fa7e75e99e62110b3d6f17
+      - req_614128ee6d98d23b06f2c80179be716a
       Openai-Processing-Ms:
-      - '56'
+      - '59'
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=GEDiUGRn9DjY3GtC46LViGdGpZLL2.bodmoJLlZWhdg-1718357692-1.0.1.1-FGiEXj2cqBgqfHmQ4_7wmeVlGU7e8b_nrhkiz_fopEyDHnu7_oVJx7iNKI_QHSAuvFWuscRxYwIT7ysRTPhX4w;
-        path=/; expires=Fri, 14-Jun-24 10:04:52 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=AM3SFk3DYdO0SAtJBFhbU8TNzT4LXWVndehX7ffyAk4-1719477534-1.0.1.1-OhZUVDwxAryydI3rfBQQRsVPHa1GUvJ0cjzXVOQldIkx9LmcHoUfwwJhnBym7STxa3aeSmXoWiVCTwsocWBuLw;
+        path=/; expires=Thu, 27-Jun-24 09:08:54 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=HBErKm1ovP2kYzGSo66fufSs7bcKWiWzEFzsXdg5CC0-1718357692841-0.0.1.1-604800000;
+      - _cfuvid=0UDA_orQKd9uoD1UubVWryPWK16Tu1imRVM8YVR9n1c-1719477534779-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 893953bb1ac152ab-LHR
+      - 89a41f9f1ab0770b-LHR
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "asst_SrmjTd9rkxYrDcjpEbpg8Cnx",
+          "id": "asst_HKcPOD9hNl23m83QtWoVlj18",
           "object": "assistant",
-          "created_at": 1718357692,
-          "name": "Sharable",
-          "description": "Sharable",
+          "created_at": 1719477534,
+          "name": "demand-driven",
+          "description": "demand-driven",
           "model": "gpt-3.5-turbo",
-          "instructions": "innovate collaborative relationships",
+          "instructions": "whiteboard compelling partnerships",
           "tools": [],
           "top_p": 1.0,
           "temperature": 1.0,
@@ -77,5 +77,5 @@ http_interactions:
           "metadata": {},
           "response_format": "auto"
         }
-  recorded_at: Fri, 14 Jun 2024 09:34:52 GMT
+  recorded_at: Thu, 27 Jun 2024 08:38:54 GMT
 recorded_with: VCR 6.2.0

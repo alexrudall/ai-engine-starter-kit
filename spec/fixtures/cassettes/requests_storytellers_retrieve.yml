@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.openai.com/v1/assistants/asst_SrmjTd9rkxYrDcjpEbpg8Cnx
+    uri: https://api.openai.com/v1/assistants/asst_HKcPOD9hNl23m83QtWoVlj18
     body:
       encoding: US-ASCII
       string: ''
@@ -10,9 +10,9 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer sk-AizTVjdUvJmbL4FQrAp3qgRN4RpNudGNatFErFJ2
+      - Bearer <OPENAI_ACCESS_TOKEN>
       Openai-Organization:
-      - org-Rf437IxKhhQPMiIQ0Es8OwrH
+      - "<OPENAI_ORGANIZATION_ID>"
       Openai-Beta:
       - assistants=v2
       Accept-Encoding:
@@ -27,7 +27,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 14 Jun 2024 09:34:53 GMT
+      - Thu, 27 Jun 2024 08:38:55 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -39,34 +39,34 @@ http_interactions:
       Openai-Organization:
       - user-jxm65ijkzc1qrfhc0ij8moic
       X-Request-Id:
-      - req_252a20aae8607b1750222f851e3b9685
+      - req_e6a1b2bb26fd4575900ebae4dd442927
       Openai-Processing-Ms:
-      - '41'
+      - '31'
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=mR9trarbKsbfaWEciunsJhGaJq452aXV1c7QpxZhEgw-1718357693-1.0.1.1-IAWIaKEUptzIrDC7hBJcARNCxcMVvSorebsqTSsJOs6x4k8QTOnZHnJEC7UE8ZRlFM2uedayi5Ucux2FGtKyHw;
-        path=/; expires=Fri, 14-Jun-24 10:04:53 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=1.FGD7gyVVgEtAEBwwSb8fZRw4FKzGHBp3qP5BLwomE-1719477535-1.0.1.1-ySBkSasnc_eatn.g4sowo48YhuoNKLtqRGGXkQlF1sptH5.YLH99Vo0HIUvGgtj4CmFYgskPSNngT326BhkZ9Q;
+        path=/; expires=Thu, 27-Jun-24 09:08:55 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=29sXenusnsTNmBbwmLi6KjSG9yAl28KnVgSaITR4WaU-1718357693417-0.0.1.1-604800000;
+      - _cfuvid=LdcdABfgQGzkSDjJ2ky2zBdCfCDuFoOp2IZa6TzeyaA-1719477535369-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 893953bec8987692-LHR
+      - 89a41fa2fdfc23ee-LHR
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "asst_SrmjTd9rkxYrDcjpEbpg8Cnx",
+          "id": "asst_HKcPOD9hNl23m83QtWoVlj18",
           "object": "assistant",
-          "created_at": 1718357692,
-          "name": "Sharable",
-          "description": "Sharable",
+          "created_at": 1719477534,
+          "name": "demand-driven",
+          "description": "demand-driven",
           "model": "gpt-3.5-turbo",
           "instructions": "Design a big hat",
           "tools": [],
@@ -76,5 +76,5 @@ http_interactions:
           "metadata": {},
           "response_format": "auto"
         }
-  recorded_at: Fri, 14 Jun 2024 09:34:53 GMT
+  recorded_at: Thu, 27 Jun 2024 08:38:55 GMT
 recorded_with: VCR 6.2.0
