@@ -1,6 +1,4 @@
 class MessagesController < ApplicationController
-  include ActionView::RecordIdentifier
-
   def create
     if message_params[:assistant_thread_id].present?
       CreateAssistantMessageAndRun.perform_async(
