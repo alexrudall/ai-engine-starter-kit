@@ -7,7 +7,7 @@ FactoryBot.define do
 
   factory :storyteller do
     name { Faker::Company.buzzword }
-    model { AI::Engine::Assistant::MODEL_OPTIONS.sample }
+    model { AI::Engine::MODEL_OPTIONS.sample }
     instructions { Faker::Company.bs }
     description { Faker::Company.bs }
     max_prompt_tokens { AI::Engine::Assistant::MIN_PROMPT_TOKENS }

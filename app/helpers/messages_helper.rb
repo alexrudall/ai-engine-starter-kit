@@ -9,7 +9,7 @@ module MessagesHelper
 
   def message_model_options(selected_model: nil)
     options_for_select(
-      AI::Engine::Chat::MODEL_OPTIONS,
+      AI::Engine::MODEL_OPTIONS,
       selected: selected_model
     )
   end

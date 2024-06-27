@@ -11,7 +11,7 @@ RSpec.describe MessagesController, type: :request do
     context "with valid parameters" do
       context "with a chat" do
         let(:chat) { current_user.chats.create }
-        let(:model) { AI::Engine::Chat::MODEL_OPTIONS.sample }
+        let(:model) { AI::Engine::MODEL_OPTIONS.sample }
         let(:valid_attributes) { {chat_id: chat.id, content: "Hi there", model: model} }
 
         it "creates a new Message" do
