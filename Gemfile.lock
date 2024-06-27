@@ -1,7 +1,7 @@
 GEM
-  remote: https://get.keygen.sh/97ac1497-64bd-4754-8336-d709b6df18b1/0.2.0/
+  remote: https://get.keygen.sh/97ac1497-64bd-4754-8336-d709b6df18b1/0.3.0/
   specs:
-    ai-engine (0.2.0)
+    ai-engine (0.3.0)
       ruby-openai (~> 7.1.0)
 
 GEM
@@ -399,7 +399,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  ai-engine (~> 0.2.0)!
+  ai-engine (~> 0.3.0)!
   bootsnap
   debug
   devise (~> 4.9.4)
