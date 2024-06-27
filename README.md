@@ -25,8 +25,8 @@ You can add AI::Engine to your Gemfile like this - note the version (0.1.2 in th
 
 ```
 # The easiest way to get AI into your Rails app.
-source "https://#{ENV["AI_ENGINE_TOKEN"]}@get.keygen.sh/97ac1497-64bd-4754-8336-d709b6df18b1/0.2.0" do
-  gem "ai-engine", "~> 0.2.0"
+source "https://#{ENV["AI_ENGINE_TOKEN"]}@get.keygen.sh/97ac1497-64bd-4754-8336-d709b6df18b1/0.3.0" do
+  gem "ai-engine", "~> 0.3.0"
 end
 ```
 
