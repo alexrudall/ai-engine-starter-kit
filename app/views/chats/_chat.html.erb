@@ -1,0 +1,11 @@
+<div id="<%= dom_id chat %>">
+  <p class="my-5">
+    <%= "Created #{chat.created_at.to_formatted_s(:short)}" %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this chat", chat, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to "Edit this chat", edit_chat_path(chat), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

@@ -26,8 +26,9 @@
         </div>
         <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
           <div class="text-sm lg:flex-grow">
-            <%= link_to "Storytellers", storytellers_path, class: "block mt-4 lg:inline-block lg:mt-0 hover:text-red-200 text-white mr-4" %>
-            <%= link_to "Threads", assistant_threads_path, class: "block mt-4 lg:inline-block lg:mt-0 hover:text-red-200 text-white mr-4" %>
+            <%= link_to "Chats", chats_path, class: "block mt-4 lg:inline-block lg:mt-0 hover:text-red-200 text-white mr-4 px-4 py-2 #{'border rounded' if controller_name == 'chats'}" %>
+            <%= link_to "Assistants", storytellers_path, class: "block mt-4 lg:inline-block lg:mt-0 hover:text-red-200 text-white mr-4 px-4 py-2 #{'border rounded' if controller_name == 'storytellers'}" %>
+            <%= link_to "Threads", assistant_threads_path, class: "block mt-4 lg:inline-block lg:mt-0 hover:text-red-200 text-white mr-4 px-4 py-2 #{'border rounded' if controller_name == 'assistant_threads'}" %>
           </div>
           <div>
             <% if current_user.present? %>

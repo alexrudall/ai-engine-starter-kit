@@ -30,6 +30,18 @@ source "https://#{ENV["AI_ENGINE_TOKEN"]}@get.keygen.sh/97ac1497-64bd-4754-8336-
 end
 ```
 
+You then need to add the migrations for the gem:
+
+```
+bundle exec rails ai_engine:install:migrations
+```
+
+And run them:
+
+```
+bundle exec rails db:migrate
+```
+
 ## Set up Google Sign In with Omniauth
 
 - Go to the [Google Cloud Console](https://console.cloud.google.com/)

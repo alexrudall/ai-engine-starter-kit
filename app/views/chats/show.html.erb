@@ -1,0 +1,26 @@
+<div class="mx-auto md:w-2/3 w-full flex">
+  <div class="mx-auto">
+    <% if notice.present? %>
+      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+    <% end %>
+
+    <div class="bg-white py-8">
+      <div class="mx-auto px-6 ">
+        <ul role="list" class="overflow-y-auto max-h-[48vh] flex flex-col-reverse">
+          <%= turbo_stream_from "#{dom_id(@chat)}_messages" %>
+          <div id="<%= dom_id(@chat) %>_messages">
+            <%= render @chat.messages.order(:created_at) %>
+          </div>
+        </ul>
+
+        <%= render partial: "messages/form", locals: { messageable: @chat, selected_model: @selected_model } %>
+      </div>
+    </div>
+
+    <%= link_to "Edit this chat", edit_chat_path(@chat), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <div class="inline-block ml-2">
+      <%= button_to "Destroy this chat", chat_path(@chat), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+    </div>
+    <%= link_to "Back to chats", chats_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+  </div>
+</div>

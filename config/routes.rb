@@ -1,10 +1,9 @@
 require "sidekiq/web"
 
 Rails.application.routes.draw do
+  resources :assistant_threads
+  resources :chats
   resources :messages
-  resources :assistant_threads do
-    resources :messages, only: %i[create]
-  end
   resources :storytellers
 
   devise_for :users, controllers: {
